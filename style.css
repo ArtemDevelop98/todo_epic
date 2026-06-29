@@ -1,0 +1,147 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button{
+    cursor: pointer;
+}
+
+section{
+    padding: 5px;
+}
+
+.container{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+
+.add-input-task{
+    display: flex;
+    flex-direction: column;
+    max-width: 200px;
+    padding: 10px;
+}
+
+.hidden{
+    display: none;
+}
+
+
+.add-input-task__el{
+    margin-bottom: 5px;
+}
+
+.list{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+
+    padding: 20px;
+}
+
+.task{
+    display: flex;
+    flex-direction: column;
+
+    min-height: 180px;
+    padding: 16px;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.task:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.task.edit{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.planned{
+    border-left: 4px solid gray;
+}
+
+.doing{
+    border-left: 4px solid orange;
+}
+
+.done{
+    border-left: 4px solid green;
+}
+
+.status-Btn-task.doing{
+    color: orange;
+}
+.status-Btn-task.done{
+    color: green;
+}
+
+.task__header,.task__footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-task{
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #111827;
+}
+
+.description-task{
+    color: #6b7280;
+    line-height: 1.5;
+    flex-grow: 1;
+}
+
+.dltBtn-task,.editBtn-task,.status-Btn-task{
+    width: 32px;
+    height: 32px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #9ca3af;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+.dltBtn-task:hover{
+    background: #fee2e2;
+
+    color: #dc2626;
+
+    transform: scale(1.1);
+}
+.editBtn-task:hover{
+    background: #62c5f3;
+
+
+    transform: scale(1.1);
+}
+
+.date-task{
+    display: flex;
+    justify-content: end;
+}

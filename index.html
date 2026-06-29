@@ -13,22 +13,41 @@
         </div>
     </header>
 
-    <section class="adder-tasks">
-        <div class="container">
-            <button>Новая Задача</button>
-        </div>
-    </section>
+    <main class="container">
 
-    <section class="list">
-        <div class="container">
+        <section class="search-tasks">
+            <input type="text" id="search-input" placeholder="Поиск...">
+        </section>
+
+        <section class="add-tasks-btn">
+            <button>Новая Задача</button>
+        </section>
+
+        <section class="filters-tasks-btn">
+            <button id="all">all</button>
+            <button id="planned">planned</button>
+            <button id="doing">doing</button>
+            <button id="done">done</button>
+        </section>
+
+        <section class="add-input-task hidden">
+            <input class="add-input-task__el" id="task-title-input" type="text" name="title" placeholder="Название задачи">
+
+            <textarea class="add-input-task__el" name="description" id="task-description-input"></textarea>
+
+            <button class="add-input-task__el " id="create-task-btn">Создать</button>
+        </section>
+
+        <section class="list">
             <p>//Будущие задачи</p>
-        </div>
-    </section>
+        </section>
+    </main>
 
 
    
     
 <script src="js/state.js"></script>
+<script src="js/function.js"></script>
 <script src="js/render.js"></script>
 <script src="js/storage.js"></script>
 <script src="js/event.js"></script>
