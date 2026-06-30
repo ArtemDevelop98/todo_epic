@@ -19,23 +19,41 @@ const doneFilterBtn = document.getElementById("done");
 
 allFilterBtn.addEventListener('click',() => {
     currentStatusFilter = "all";
+    activeFilter(allFilterBtn);
     update();
 });
 
 plannedFilterBtn.addEventListener('click',() => {
     currentStatusFilter = "planned";
+    activeFilter(plannedFilterBtn);
     update();
 });
 
 doingFilterBtn.addEventListener('click',() => {
     currentStatusFilter = "doing";
+    activeFilter(doingFilterBtn);
     update();
 });
 
 doneFilterBtn.addEventListener('click',() => {
     currentStatusFilter = "done";
+    activeFilter(doneFilterBtn);
     update();
 });
+
+function activeFilter(currentBtn){
+
+    const filterBtn =[allFilterBtn,plannedFilterBtn,doingFilterBtn,doneFilterBtn];
+
+    filterBtn.forEach(btn => {
+        btn.classList.remove("active");
+    });
+    currentBtn.classList.add("active");
+
+
+
+};
+
                                                                               //Search
 
 const searchInput = document.getElementById("search-input");

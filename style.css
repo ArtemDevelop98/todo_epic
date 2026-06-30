@@ -10,6 +10,10 @@ button{
     cursor: pointer;
 }
 
+.active{
+    background: green;
+}
+
 section{
     padding: 5px;
 }
